@@ -6,7 +6,7 @@ import Products from './products'
 
 const Main = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-gradient-to-br from-pink-800 to-teal-800">
       <Head title="Main" />
       <Header caption="SkillCrucial 5 Shop" />
       <Products />

@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
   const { list } = useSelector((store) => store.cart)
 
   return (
-    <div className="flex flex-col border rounded-md m-1 p-2 w-40" title={product.description}>
+    <div className="flex flex-col border rounded-md m-1 p-2 w-40 text-white" title={product.description}>
       <div className="font-semibold">
         <p className="card__title truncate">{product.title}</p>
       </div>

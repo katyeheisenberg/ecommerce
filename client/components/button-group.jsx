@@ -35,7 +35,7 @@ const ButtonGroup = () => {
 
   return (
     <>
-      <div className="inline-flex shadow-sm rounded-md" role="group">
+      <div className="inline-flex shadow-sm rounded-md bg-white h-8" role="group">
         {
           Object.keys(rates).map((name, index, array) => (
             <button
@@ -50,20 +50,20 @@ const ButtonGroup = () => {
           ))
         }
       </div>
-      <div className="inline-flex shadow-sm rounded-md" role="group">
+      <div className="inline-flex shadow-sm rounded-md h-8" role="group">
         <button
           type="button"
           className="rounded-l-lg border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
           onClick={sortByType('name')}
         >
-          Name <span>{sort.name ? '▼' : '▲'}</span>
+          name <span>{sort.name ? '▼' : '▲'}</span>
         </button>
         <button
           type="button"
           className="rounded-r-md border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
           onClick={sortByType('price')}
         >
-          Price <span>{sort.price ? '▼' : '▲'}</span>
+          price <span>{sort.price ? '▼' : '▲'}</span>
         </button>
       </div>
     </>

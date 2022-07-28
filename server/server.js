@@ -35,7 +35,7 @@ server.get('/', (req, res) => {
 
 server.get('/api/v1/products', async (req, res) => {
   const arrayOfProducts = await getProductsFunc()
-  res.json(arrayOfProducts.slice(0,50))
+  res.json(arrayOfProducts.slice(0, 50))
 })
 
 server.get('/api/v1/currency', async (req, res) => {
@@ -58,7 +58,7 @@ server.post('/api/v1/sort', async (req, res) => {
   const arrayOfProducts = await getProductsFunc()
   const { sortType, direction } = req.body
   const sortedProductsArray = sortProductsList(arrayOfProducts, sortType, direction)
-  res.json(sortedProductsArray.slice(0,50))
+  res.json(sortedProductsArray.slice(0, 50))
 })
 
 // MongoDB

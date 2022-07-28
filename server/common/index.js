@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import axios from 'axios'
 import { readFile } from 'fs/promises'
 
@@ -12,7 +13,7 @@ export const getProductsFunc = () => {
 export const sortProductsList = (arrayOfProducts, sortType, direction) => {
   switch (sortType) {
     case 'name': {
-      arrayOfProducts.sort((a, b) => {
+      return arrayOfProducts.sort((a, b) => {
         if (direction) {
           return b.title.localeCompare(a.title)
         }
@@ -20,7 +21,7 @@ export const sortProductsList = (arrayOfProducts, sortType, direction) => {
       })
     }
     case 'price': {
-      arrayOfProducts.sort((a, b) => {
+      return arrayOfProducts.sort((a, b) => {
         if (direction) {
           return b.price - a.price
         }

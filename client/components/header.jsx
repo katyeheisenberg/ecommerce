@@ -8,15 +8,22 @@ const Header = ({ caption }) => {
   const { totalAmount, totalPrice } = useSelector((s) => s.cart)
   const { rates, currencyName } = useSelector((store) => store.settings)
   return (
-    <div className="flex justify-between p-4 bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="flex justify-between p-4 bg-gradient-to-r">
       <ButtonGroup />
       <Link to="/">
-        <div className="flex font-semibold text-gray-200" id="brand-name" cursor="pointer">
+        <div
+          className="p-3 border border-white rounded-md bg-gradient-to-r from-rose-500 to-rose-600 flex font-semibold text-gray-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
+          id="brand-name"
+          cursor="pointer"
+        >
           {caption}
         </div>
       </Link>
-      <Link to="/cart" className="text-white text-center">
-        <div>cart</div>
+      <Link
+        to="/cart"
+        className="text-white text-center border border-white rounded-md p-2 bg-gradient-to-r from-rose-500 to-rose-600 font-semibold"
+      >
+        <div className="hover:text-blue-700">Cart</div>
         <div id="order-count" className="text-center">
           Items: {totalAmount}
         </div>

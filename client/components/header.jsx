@@ -22,6 +22,7 @@ const Header = ({ caption }) => {
           id="brand-name"
           cursor="pointer"
         >
+          <a href="tel:PHONE_NUM"> +79114211544 </a>
           {caption}
         </div>
       </Link>

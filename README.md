@@ -3,7 +3,6 @@
 ## Description
 
 It's an e-commerce page made with the help of React, Tailwind, Redux.
-On the bottom of the page you can find logs.
 
 ### How to use it?
 Install modules

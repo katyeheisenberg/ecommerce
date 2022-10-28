@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import ButtonGroup from './button-group'
-import Phone from './phone'
 
 const Header = ({ caption }) => {
   const { totalAmount, totalPrice } = useSelector((s) => s.cart)
@@ -11,7 +10,6 @@ const Header = ({ caption }) => {
   return (
     <div className="flex justify-between p-4 bg-gradient-to-r text-white">
       <ButtonGroup />
-      <Phone phone="+79114211544" />
       <Link to="/">
         <div
           className="p-3 border border-white rounded-md bg-gradient-to-r from-rose-500 to-rose-600 flex font-semibold text-gray-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"
